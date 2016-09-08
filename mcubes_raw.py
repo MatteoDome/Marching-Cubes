@@ -49,29 +49,29 @@ def polygonize (kx, ky, kz, isolevel):
 		return 0
 
 	if (edgeTable[cubeindex] & 1):
-      	vertlist[0] = vertex_interp(isolevel,grid.p[0],grid.p[1],cell.values[0],cell.values[1]);
+		vertlist[0] = vertex_interp(isolevel,grid.p[0],grid.p[1],cell.values[0],cell.values[1]);
    	if (edgeTable[cubeindex] & 2):
-      	vertlist[1] = vertex_interp(isolevel,grid.p[1],grid.p[2],cell.values[1],cell.values[2]);
+   		vertlist[1] = vertex_interp(isolevel,grid.p[1],grid.p[2],cell.values[1],cell.values[2]);
    	if (edgeTable[cubeindex] & 4):
-      	vertlist[2] = vertex_interp(isolevel,grid.p[2],grid.p[3],cell.values[2],cell.values[3]);
+   		vertlist[2] = vertex_interp(isolevel,grid.p[2],grid.p[3],cell.values[2],cell.values[3]);
    	if (edgeTable[cubeindex] & 8):
-      	vertlist[3] = vertex_interp(isolevel,grid.p[3],grid.p[0],cell.values[3],cell.values[0]);
+   		vertlist[3] = vertex_interp(isolevel,grid.p[3],grid.p[0],cell.values[3],cell.values[0]);
    	if (edgeTable[cubeindex] & 16):
-      	vertlist[4] = vertex_interp(isolevel,grid.p[4],grid.p[5],cell.values[4],cell.values[5]);
+   		vertlist[4] = vertex_interp(isolevel,grid.p[4],grid.p[5],cell.values[4],cell.values[5]);
    	if (edgeTable[cubeindex] & 32):
-      	vertlist[5] = vertex_interp(isolevel,grid.p[5],grid.p[6],cell.values[5],cell.values[6]);
+   		vertlist[5] = vertex_interp(isolevel,grid.p[5],grid.p[6],cell.values[5],cell.values[6]);
    	if (edgeTable[cubeindex] & 64):
-   	   	vertlist[6] = vertex_interp(isolevel,grid.p[6],grid.p[7],cell.values[6],cell.values[7]);
+   		vertlist[6] = vertex_interp(isolevel,grid.p[6],grid.p[7],cell.values[6],cell.values[7]);
    	if (edgeTable[cubeindex] & 128):
-      	vertlist[7] = vertex_interp(isolevel,grid.p[7],grid.p[4],cell.values[7],cell.values[4]);
+   		vertlist[7] = vertex_interp(isolevel,grid.p[7],grid.p[4],cell.values[7],cell.values[4]);
    	if (edgeTable[cubeindex] & 256):
-      	vertlist[8] = vertex_interp(isolevel,grid.p[0],grid.p[4],cell.values[0],cell.values[4]);
+   		vertlist[8] = vertex_interp(isolevel,grid.p[0],grid.p[4],cell.values[0],cell.values[4]);
    	if (edgeTable[cubeindex] & 512):
-      	vertlist[9] = vertex_interp(isolevel,grid.p[1],grid.p[5],cell.values[1],cell.values[5]);
+   		vertlist[9] = vertex_interp(isolevel,grid.p[1],grid.p[5],cell.values[1],cell.values[5]);
    	if (edgeTable[cubeindex] & 1024):
-      	vertlist[10] = vertex_interp(isolevel,grid.p[2],grid.p[6],cell.values[2],cell.values[6]);
+   		vertlist[10] = vertex_interp(isolevel,grid.p[2],grid.p[6],cell.values[2],cell.values[6]);
    	if (edgeTable[cubeindex] & 2048):
-      	vertlist[11] = vertex_interp(isolevel,grid.p[3],grid.p[7],cell.values[3],cell.values[7]);
+   		vertlist[11] = vertex_interp(isolevel,grid.p[3],grid.p[7],cell.values[3],cell.values[7]);
 
 def vertex_interp(isolevel, p1, p2, value1, value2):
 	if (np.absolute(isolevel - value1) < 0.001):
